@@ -39,7 +39,7 @@ const FilmStrip = ({ direction = 'left', images = [] }: FilmStripProps) => {
                 <div className="absolute inset-1 bg-black rounded-sm overflow-hidden">
                   <PhotoFrame 
                     placeholder={images.length === 0} 
-                    imageSrc={images.length > 0 ? `https://images.unsplash.com/${images[index % images.length]}?w=400&h=400&fit=crop` : undefined}
+                    imageSrc={images.length > 0 ? images[index % images.length] : undefined}
                     className="w-full h-full border-0 rounded-none shadow-none" 
                   />
                 </div>

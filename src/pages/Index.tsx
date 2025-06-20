@@ -3,15 +3,19 @@ import FilmStrip from '@/components/FilmStrip';
 
 const Index = () => {
   const topImages = [
-    'photo-1649972904349-6e44c42644a7', // woman sitting on a bed using a laptop
-    'photo-1488590528505-98d2b5aba04b', // turned on gray laptop computer
-    'photo-1518770660439-4636190af475', // macro photography of black circuit board
+    '/lovable-uploads/8cce4fbf-bd5e-46dd-8ed5-c7cd55685801.png',
+    '/lovable-uploads/f584dd4c-5932-4e16-ad26-1b2cfbe4369e.png',
+    '/lovable-uploads/5b2c352c-5f16-4718-94e0-c50a3c452cca.png',
+    '/lovable-uploads/dff0c834-55ab-499f-84b2-b2e184d113f6.png',
+    '/lovable-uploads/26492936-5959-45c3-a3fb-05a9d90e6877.png',
   ];
 
   const bottomImages = [
-    'photo-1461749280684-dccba630e2f6', // monitor showing Java programming
-    'photo-1486312338219-ce68d2c6f44d', // person using MacBook Pro
-    'photo-1649972904349-6e44c42644a7', // woman sitting on a bed using a laptop
+    '/lovable-uploads/7906af4d-2264-4615-869a-977d7e355a3c.png',
+    '/lovable-uploads/a3809b2c-ffb3-447c-b6c5-0f9977dc23a8.png',
+    '/lovable-uploads/9b5f35c2-0c69-46ad-8ae2-61ee1fcf65bb.png',
+    '/lovable-uploads/53b669dc-2b93-4345-8b57-a9df84ce71b6.png',
+    '/lovable-uploads/515d3d29-2a35-48fc-8006-770d0827f309.png',
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-accent/20 to-background">
