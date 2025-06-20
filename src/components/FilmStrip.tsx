@@ -5,7 +5,7 @@ interface FilmStripProps {
 }
 
 const FilmStrip = ({ direction = 'left' }: FilmStripProps) => {
-  const photos = Array.from({ length: 8 }, (_, i) => i);
+  const photos = Array.from({ length: 16 }, (_, i) => i % 8); // Duplicate for seamless loop
 
   return (
     <div className="relative overflow-hidden py-8">
@@ -42,7 +42,7 @@ const FilmStrip = ({ direction = 'left' }: FilmStripProps) => {
               
               {/* Frame number */}
               <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-400 font-mono">
-                {String(index + 1).padStart(2, '0')}
+                {String((index % 8) + 1).padStart(2, '0')}
               </div>
             </div>
           ))}
