@@ -1,5 +1,5 @@
 import BirthdayMessage from '@/components/BirthdayMessage';
-import PhotoFrame from '@/components/PhotoFrame';
+import FilmStrip from '@/components/FilmStrip';
 
 const Index = () => {
   return (
@@ -11,48 +11,20 @@ const Index = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-12">
-        {/* Photo Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-12">
-          {/* Top row photos */}
-          <div className="hidden md:block">
-            <PhotoFrame className="w-full aspect-square" />
-          </div>
-          <div className="hidden lg:block">
-            <PhotoFrame className="w-full aspect-square" />
-          </div>
-          <div className="col-span-2 md:col-span-2 lg:col-span-2">
-            <div className="grid grid-cols-2 gap-4">
-              <PhotoFrame className="w-full aspect-square" />
-              <PhotoFrame className="w-full aspect-square" />
-            </div>
-          </div>
-          <div className="hidden lg:block">
-            <PhotoFrame className="w-full aspect-square" />
-          </div>
-          <div className="hidden md:block">
-            <PhotoFrame className="w-full aspect-square" />
-          </div>
+      <div className="relative z-10 py-12">
+        {/* Top Film Strip */}
+        <div className="mb-8">
+          <FilmStrip direction="left" />
         </div>
 
         {/* Central Message */}
-        <div className="my-16">
+        <div className="container mx-auto px-4 my-16">
           <BirthdayMessage />
         </div>
 
-        {/* Bottom Photo Gallery */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-12">
-          <div className="hidden md:block">
-            <PhotoFrame className="w-full aspect-square" />
-          </div>
-          <PhotoFrame className="w-full aspect-square" />
-          <div className="hidden md:block">
-            <PhotoFrame className="w-full aspect-square" />
-          </div>
-          <PhotoFrame className="w-full aspect-square" />
-          <div className="hidden md:block">
-            <PhotoFrame className="w-full aspect-square" />
-          </div>
+        {/* Bottom Film Strip */}
+        <div className="mt-8">
+          <FilmStrip direction="right" />
         </div>
 
         {/* Floating hearts decoration */}
