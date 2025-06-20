@@ -2,10 +2,11 @@ import PhotoFrame from './PhotoFrame';
 
 interface FilmStripProps {
   direction?: 'left' | 'right';
+  images?: string[];
 }
 
-const FilmStrip = ({ direction = 'left' }: FilmStripProps) => {
-  const photos = Array.from({ length: 16 }, (_, i) => i % 8); // Duplicate for seamless loop
+const FilmStrip = ({ direction = 'left', images = [] }: FilmStripProps) => {
+  const photos = Array.from({ length: 16 }, (_, i) => i % Math.max(images.length, 8)); // Duplicate for seamless loop
 
   return (
     <div className="relative overflow-hidden py-8">
@@ -36,13 +37,17 @@ const FilmStrip = ({ direction = 'left' }: FilmStripProps) => {
               {/* Film frame border */}
               <div className="absolute inset-0 bg-gray-700 rounded-sm">
                 <div className="absolute inset-1 bg-black rounded-sm overflow-hidden">
-                  <PhotoFrame placeholder={true} className="w-full h-full border-0 rounded-none shadow-none" />
+                  <PhotoFrame 
+                    placeholder={images.length === 0} 
+                    imageSrc={images.length > 0 ? `https://images.unsplash.com/${images[index % images.length]}?w=400&h=400&fit=crop` : undefined}
+                    className="w-full h-full border-0 rounded-none shadow-none" 
+                  />
                 </div>
               </div>
               
               {/* Frame number */}
               <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-400 font-mono">
-                {String((index % 8) + 1).padStart(2, '0')}
+                {String((index % Math.max(images.length, 8)) + 1).padStart(2, '0')}
               </div>
             </div>
           ))}

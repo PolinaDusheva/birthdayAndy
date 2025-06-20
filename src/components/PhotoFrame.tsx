@@ -3,9 +3,10 @@ import { useState } from 'react';
 interface PhotoFrameProps {
   placeholder?: boolean;
   className?: string;
+  imageSrc?: string;
 }
 
-const PhotoFrame = ({ placeholder = true, className = '' }: PhotoFrameProps) => {
+const PhotoFrame = ({ placeholder = true, className = '', imageSrc }: PhotoFrameProps) => {
   const [imageError, setImageError] = useState(false);
 
   return (
@@ -21,7 +22,7 @@ const PhotoFrame = ({ placeholder = true, className = '' }: PhotoFrameProps) => 
         </div>
       ) : (
         <img
-          src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=300&h=300&fit=crop"
+          src={imageSrc || "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=300&h=300&fit=crop"}
           alt="Memory together"
           className="w-full h-full object-cover"
           onError={() => setImageError(true)}

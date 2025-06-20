@@ -2,6 +2,17 @@ import BirthdayMessage from '@/components/BirthdayMessage';
 import FilmStrip from '@/components/FilmStrip';
 
 const Index = () => {
+  const topImages = [
+    'photo-1649972904349-6e44c42644a7', // woman sitting on a bed using a laptop
+    'photo-1488590528505-98d2b5aba04b', // turned on gray laptop computer
+    'photo-1518770660439-4636190af475', // macro photography of black circuit board
+  ];
+
+  const bottomImages = [
+    'photo-1461749280684-dccba630e2f6', // monitor showing Java programming
+    'photo-1486312338219-ce68d2c6f44d', // person using MacBook Pro
+    'photo-1649972904349-6e44c42644a7', // woman sitting on a bed using a laptop
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-accent/20 to-background">
       {/* Decorative background elements */}
@@ -14,7 +25,7 @@ const Index = () => {
       <div className="relative z-10 py-12">
         {/* Top Film Strip */}
         <div className="mb-8">
-          <FilmStrip direction="left" />
+          <FilmStrip direction="left" images={topImages} />
         </div>
 
         {/* Central Message */}
@@ -24,7 +35,7 @@ const Index = () => {
 
         {/* Bottom Film Strip */}
         <div className="mt-8">
-          <FilmStrip direction="right" />
+          <FilmStrip direction="right" images={bottomImages} />
         </div>
 
         {/* Floating hearts decoration */}
