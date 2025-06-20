@@ -17,28 +17,34 @@ const BirthdayMessage = () => {
           </div>
         </div>
         
-        <div className="prose prose-lg max-w-none text-foreground">
+        <div className="prose prose-lg max-w-none text-foreground text-center">
           <p className="text-lg leading-relaxed text-muted-foreground italic">
-            "To the most amazing person in my life..."
+            за най прекрасната капибара в живота ми...
           </p>
           
-          <div className="bg-accent/30 rounded-lg p-6 my-6 text-left">
-            <p className="mb-4">
-              Another year of your incredible existence, and I couldn't be more grateful to share this journey with you. 
+          <div className="bg-accent/30 rounded-lg p-6 my-6 text-center">
+            <p className="mb-4 text-center">
+              И още една година от нашия живот измина и неусетно осъзнаваме колко неща сме преживели заедно.
+              Нещо, което не бихме могли да си представим преди да се срещнем.
             </p>
-            <p className="mb-4">
-              You bring so much joy, laughter, and love into my life every single day. Your kindness, your humor, and the way you make even ordinary moments feel magical - that's what makes you so special.
+            <p className="mb-4 text-center">
+              
+              Днес е повод да се радваш на това което си постигнал въпреки трудностите, защото го заслужавш. 
+              Често предизвикатекствата ни правят по-силни, а хората ни правят това което сме. 
+              Всичко се случва с причина и често не е под наш контрол. Причината за ммоето щастие си ти!
             </p>
-            <p>
-              Here's to celebrating you today and creating even more beautiful memories together. Happy Birthday, my love! 🥳
+            <p className="text-center">
+              Бъди все така целеустремен и не спирай да преследваш мечтите си.
+              Когато в живота ти се случва нещо невероятно, знай че винаги ще те подкрепям и ще се радвам да съм част от твоите приключения.
+              Честит Рожден ден! 🥳
             </p>
           </div>
           
           <p className="text-lg font-semibold text-primary">
-            With all my love,
+            С цялата си любов,
           </p>
           <p className="text-base text-muted-foreground italic">
-            Your [Your Name] 💕
+            Твоята Капибара 💕
           </p>
         </div>
       </div>

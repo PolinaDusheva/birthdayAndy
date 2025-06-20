@@ -18,7 +18,7 @@ const Index = () => {
     '/lovable-uploads/515d3d29-2a35-48fc-8006-770d0827f309.png',
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-accent/20 to-background">
+    <div className="min-h-screen bg-gradient-to-br from-yellow-100 to-pink-200">
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
@@ -34,7 +34,22 @@ const Index = () => {
 
         {/* Central Message */}
         <div className="container mx-auto px-4 my-16">
-          <BirthdayMessage />
+          <div className="flex items-center justify-center gap-4">
+            {/* Left images */}
+            <div className="flex flex-col gap-4 items-center">
+              <img src="/lovable-uploads/aspect-ratio.png" alt="aspect-ratio" className="w-48 h-48 object-contain" />
+              <img src="/lovable-uploads/blue-adsfdabackground-balloons-stars-copy-space-s-boy-backdrop-empty-text-baby-shower-birthday-invitation-party-286693531.png" alt="blue-adsfdabackground" className="w-48 h-48 object-contain" />
+            </div>
+            {/* Birthday Message */}
+            <div className="flex-shrink-0">
+              <BirthdayMessage />
+            </div>
+            {/* Right images */}
+            <div className="flex flex-col gap-4 items-center">
+              <img src="/lovable-uploads/blue-backgdfsround-balloons-stars-copy-space-s-boy-backdrop-empty-text-baby-shower-birthday-invitation-party-286693531.png" alt="blue-backgdfsround" className="w-48 h-48 object-contain" />
+              <img src="/lovable-uploads/blue-bku-balloons-stars-copy-space-s-boy-backdrop-empty-text-baby-shower-birthday-invitation-party-286693531.png" alt="blue-bku" className="w-48 h-48 object-contain" />
+            </div>
+          </div>
         </div>
 
         {/* Bottom Film Strip */}
